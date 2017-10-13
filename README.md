@@ -4,45 +4,27 @@ Generates random text based on n-grams of text files that it uses as training da
 The training text files I used were the first 3 Game of Thrones books. Can handle unigrams, bigrams, and trigrams.
 
 Input: HOW TO RUN
-	The first three game of thrones books are passed in as textfiles to be parsed.
-	./talker.py 3 10 001ssb.txt 002ssb.txt 003ssb.txt
-	3 is the n in ngram, 10 is the number of sentences to be generated.
 
-Output:
-	This program generates random sentences based on an Ngram model. Melissa Barrett
-	Command line settings: ./talker.py 3 10
-	Processing : 001ssb.txt
-	Processing : 002ssb.txt
-	Processing : 003ssb.txt
-	Words : 1291574
-	Unique words : 42797
-   	`` take the a face , how many men stark words had he said uneasily   moon face made  a six-hundred-foot-long rope    , to be 's sleeve and     , but the the gold cloaks  before dawn , son alone .
+The first three game of thrones books are passed in as textfiles to be parsed.	
 
- 	his saddlebags .
+./talker.py 3 10 001ssb.txt 002ssb.txt 003ssb.txt	
 
- 	and horse and brushed away unfallen they would tumble 'll have them   and mine who can match  be old prints   whole and stuffed  ser ilyn , from bayasabhad ,   -maester caleotte , between elbow and his own to it a god  better their lives had betrayed his iron spikes , , they are `` that 's fast trading galley us in black and touched her he had always   dragonknight if he   him mad .
-
- 	lord ? '' than the lion she saw that   sansa , so do the same sevenstrings and tom   the stick moved not , and  those who bent     she for years .		
-
-	red eyes as   the blade  the pommel of  it was my   `` so you     ``   `` you are  across the table steady himself .
-
-   	`` you was as crowded bellowed mikken .
-
- 	's a message   for sleep ,  a thick towel lord stark gave   he did  with him .
-
- 	the night 's normally served .
-
- 	of the houses  wine as he he was awake    his arms ,  's sight as  king 's patience  demanded suddenly ,  green , too   dwarf 's mismatched and leather ,    `` yes he   he pushed of lord eddard that jaqen h'ghar no maiden , , arms waving  `` m'lord ? fell soft and the night 's the great cell coming home now      so east , the    mng 's justice  king stannis the hal 's death   he started to looked east ,  to time the    but the tower  robert , he captive could not a muffled moan to do with wolf dreams , forget he was i did for , stamped with 't was anguy guards pounding on wood , she you again .
-
-    	, the old the castle ,     what  fat belly burst      his , nor any     , and if you fight like  wounded animal .
+3 is the n in ngram, 10 is the number of sentences to be generated.
 
 Algorithm:
+
 	PreProcess passed text files. 
+	
 		Tokenize text files so they're split on spaces and punctuation.
+		
 		Create separate token lists of tokenized sentences, split on punctuation.
+		
 		Add both sets of word and sentence tokens to respective master list,
+		
 			which holds all texts token lists.
+			
 		Create frequency distributions for all sets of word tokens.
+		
 		Frequency distributions tell us how often a word is used.
 
 	Calculate Total Word Count and Unique Word Count.
